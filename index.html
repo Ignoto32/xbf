@@ -87,6 +87,7 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
+    max-width: 600px; /* Larghezza aumentata */
   }
 
   .testimonial {
@@ -98,8 +99,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    display: none;
+    max-width: 600px; /* Larghezza aumentata */
   }
 
   .testimonial-text {
@@ -125,6 +125,12 @@
   .author-name {
     font-weight: bold;
     color: #555;
+  }
+
+  /* Colore stelline */
+  .stars .star {
+    color: #21a5a4; /* Colore stelline */
+    font-size: 20px;
   }
 </style>
 
@@ -152,30 +158,4 @@
 
   // Mostra la prima testimonianza all'inizio
   showNextTestimonial();
-</script>
-
-<script>
-  function formatDate(date) {
-    let d = new Date(date.innerText),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-    if (month.length < 2)
-        month = '0' + month;
-    if (day.length < 2)
-        day = '0' + day;
-    return [day, month, year + " "].join('/');
-  }
-
-  setInterval(() => {
-    if (document.contains(document.querySelector('.block-blog-list')) && document.querySelector('.block-blog-list-item:last-of-type .blog-list-item-meta__subtitle span:first-of-type').innerHTML.at(-1) !== ' ') {
-      let randomPosts = document.querySelectorAll('.block-blog-list-item');
-      randomPosts.forEach(post => {
-        post.querySelector('.blog-list-item-meta__subtitle span:first-of-type').innerText = formatDate(post.querySelector('.blog-list-item-meta__subtitle span:first-of-type'));
-      })
-    }
-    if (document.contains(document.querySelector('.block-blog-header')) && document.querySelector('.blog-list-item-meta__subtitle span:first-of-type').innerHTML.at(-1) !== ' ') {
-      document.querySelector('.blog-list-item-meta__subtitle span:first-of-type').innerText = formatDate(document.querySelector('.blog-list-item-meta__subtitle span:first-of-type'));
-    }
-  }, 500);
 </script>
