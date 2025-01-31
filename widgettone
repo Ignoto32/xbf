@@ -1,0 +1,181 @@
+<div class="testimonials-widget">
+  <div class="testimonial">
+    <div class="testimonial-text">
+      <p>"Non pensavo che sarei mai riuscito a essere costante con l’allenamento. Ho provato di tutto in passato, ma mollavo sempre dopo poche settimane. Alessandro mi ha aiutato a cambiare mentalità e a trovare un metodo su misura per me. Dopo tre mesi mi guardo allo specchio e vedo finalmente dei risultati: ho perso 7 kg, mi sento più forte e ho più energia durante la giornata. Ma soprattutto, ho imparato a non mollare!" </p>
+    </div>
+    <div class="stars">
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <div class="testimonial-author">
+      <p class="author-name">Andrea, 32 anni</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <div class="testimonial-text">
+      <p>"Ero sempre stanca e credevo di non avere tempo per allenarmi. Con Alessandro ho capito che bastano pochi minuti al giorno per fare la differenza. Mi ha aiutata a trovare un allenamento che si incastrasse nella mia routine senza stravolgerla. Ora mi alleno 4 volte a settimana, ho perso 5 kg e, cosa più importante, ho ritrovato la voglia di prendermi cura di me stessa." </p>
+    </div>
+    <div class="stars">
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <div class="testimonial-author">
+      <p class="author-name">Martina, 28 anni</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <div class="testimonial-text">
+      <p>"Dopo i 40 anni pensavo che rimettermi in forma fosse impossibile. Avevo mal di schiena, zero fiato e ogni tentativo di allenamento finiva con dolori ovunque. Alessandro mi ha fatto capire che il problema non era l’età, ma il metodo. Abbiamo lavorato su esercizi adatti a me e oggi, dopo 4 mesi, ho perso 8 kg, ho più energia e soprattutto niente più dolori! È stata la miglior decisione che potessi prendere." </p>
+    </div>
+    <div class="stars">
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <div class="testimonial-author">
+      <p class="author-name">Luca, 40 anni</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <div class="testimonial-text">
+      <p>"Ero bloccato in un loop infinito: lavoro, divano, Netflix e zero energia. Ogni volta che provavo a riprendere ad allenarmi, mollavo dopo due settimane. Ale mi ha detto che il problema non era solo il fisico, ma la mia mentalità. Mi ha aiutato a creare una routine sostenibile, senza stravolgimenti impossibili. Ora allenarmi è diventato parte della mia giornata, mi sento più forte, più produttivo e, soprattutto, ho smesso di rimandare le cose importanti." </p>
+    </div>
+    <div class="stars">
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <div class="testimonial-author">
+      <p class="author-name">Alessandro, 30 anni</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <div class="testimonial-text">
+      <p>"Non credevo di poter tornare a sentirmi così bene fisicamente. Con gli allenamenti su misura e un metodo che tiene conto delle mie esigenze, ho riacquistato forza e sicurezza nei movimenti. Ora affrontare la giornata non è più una fatica, ma un piacere!" </p>
+    </div>
+    <div class="stars">
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <div class="testimonial-author">
+      <p class="author-name">Serena, 54 anni</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .testimonials-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    display: none;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .testimonial-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .author-name {
+    font-weight: bold;
+    color: #555;
+  }
+</style>
+
+<script>
+  // Mostra una testimonianza alla volta e cambia ogni 5 secondi
+  let index = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+  const totalTestimonials = testimonials.length;
+
+  function showNextTestimonial() {
+    // Nascondi tutte le testimonianze
+    testimonials.forEach(testimonial => {
+      testimonial.style.display = 'none';
+    });
+
+    // Mostra la testimonianza successiva
+    testimonials[index].style.display = 'block';
+
+    // Passa alla testimonianza successiva (ciclo)
+    index = (index + 1) % totalTestimonials;
+  }
+
+  // Imposta il ciclo di cambio testimonianze
+  setInterval(showNextTestimonial, 5000);
+
+  // Mostra la prima testimonianza all'inizio
+  showNextTestimonial();
+</script>
+
+<script>
+  function formatDate(date) {
+    let d = new Date(date.innerText),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+    return [day, month, year + " "].join('/');
+  }
+
+  setInterval(() => {
+    if (document.contains(document.querySelector('.block-blog-list')) && document.querySelector('.block-blog-list-item:last-of-type .blog-list-item-meta__subtitle span:first-of-type').innerHTML.at(-1) !== ' ') {
+      let randomPosts = document.querySelectorAll('.block-blog-list-item');
+      randomPosts.forEach(post => {
+        post.querySelector('.blog-list-item-meta__subtitle span:first-of-type').innerText = formatDate(post.querySelector('.blog-list-item-meta__subtitle span:first-of-type'));
+      })
+    }
+    if (document.contains(document.querySelector('.block-blog-header')) && document.querySelector('.blog-list-item-meta__subtitle span:first-of-type').innerHTML.at(-1) !== ' ') {
+      document.querySelector('.blog-list-item-meta__subtitle span:first-of-type').innerText = formatDate(document.querySelector('.blog-list-item-meta__subtitle span:first-of-type'));
+    }
+  }, 500);
+</script>
